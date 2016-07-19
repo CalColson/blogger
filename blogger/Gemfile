@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Paperclip for file attachment
 gem 'paperclip'
 
-# Use Sorcery for authentification
+# Use Sorcery for authentification!
 gem 'sorcery'
 
 group :development, :test do

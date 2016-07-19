@@ -7,3 +7,8 @@
 data: {confirm: 'Really and truly delete?'} %>
 <br><br><br><br>
 <%= link_to '<< Back', articles_path %>
+<br><br>
+<h3>Comments (<%= @article.comments.count %>):</h3>
+<%= render partial: 'comment', collection: @article.comments %>
+<br>
+<%= render partial: 'comments/form' %>

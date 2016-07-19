@@ -9,9 +9,12 @@
 <br>
 <p><%= @article.body %></p>
 <br><br>
-<%= link_to 'edit', edit_article_path(@article) %>
-<br><br>
-<%= link_to 'delete!', article_path(@article), method: :delete, 
+<% if @article.image.exists? %>
+	<p><%= image_tag @article.image.url %></p>
+	<br><br>
+<% end %>
+<%= link_to 'edit', edit_article_path(@article) %> |
+<%= link_to 'delete', article_path(@article), method: :delete, 
 data: {confirm: 'Really and truly delete?'} %>
 <br><br><br><br>
 <%= link_to '<< Back', articles_path %>
